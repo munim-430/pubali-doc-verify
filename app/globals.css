@@ -1,0 +1,172 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-size: 14px;
+  }
+
+  @media (min-width: 768px) {
+    html {
+      font-size: 16px;
+    }
+  }
+
+  body {
+    background-color: #eef5f1;
+    padding-top: 75px;
+    margin-bottom: 60px;
+  }
+
+  @media (min-width: 768px) {
+    body {
+      padding-top: 80px;
+    }
+  }
+}
+
+@layer components {
+  /* Bootstrap-equivalent container widths, kept so the clone lands on the
+     exact same breakpoints as the original page. */
+  .bs-container {
+    width: 100%;
+    margin-inline: auto;
+    padding-inline: 1rem;
+  }
+
+  @media (min-width: 576px) {
+    .bs-container {
+      max-width: 540px;
+      padding-inline: 1.5rem;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .bs-container {
+      max-width: 720px;
+    }
+  }
+
+  @media (min-width: 992px) {
+    .bs-container {
+      max-width: 960px;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .bs-container {
+      max-width: 1140px;
+    }
+  }
+
+  @media (min-width: 1400px) {
+    .bs-container {
+      max-width: 1320px;
+    }
+  }
+
+  .brand-logo-svg {
+    width: 140px;
+    height: auto;
+  }
+
+  @media (min-width: 576px) {
+    .brand-logo-svg {
+      width: 160px;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .brand-logo-svg {
+      width: 184px;
+    }
+  }
+
+  .badge-valid {
+    background: linear-gradient(
+      90deg,
+      rgba(0, 188, 125, 0.1) 0%,
+      rgba(0, 184, 219, 0.1) 100%
+    );
+    padding: 8px 15px;
+    border-radius: 20px;
+    border: 1px solid rgba(0, 188, 125, 0.2);
+    color: #0b6b3a;
+    font-weight: 600;
+  }
+
+  .website-link {
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.18) 0%,
+      rgba(153, 153, 153, 0.13) 100%
+    );
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.05);
+    font-size: 0.875rem;
+    padding: 6px 16px;
+    white-space: nowrap;
+    transition: all 0.2s ease-in-out;
+    color: #fff;
+  }
+
+  .website-link:hover {
+    background: rgba(255, 255, 255, 0.25);
+    transform: translateY(-1px);
+    color: #fff;
+  }
+
+  @media (min-width: 768px) {
+    .website-link {
+      font-size: 0.95rem;
+      padding: 7px 20px;
+    }
+  }
+
+  .card-box {
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  }
+
+  .footer-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    margin-bottom: 6px;
+  }
+
+  .footer-item img {
+    flex-shrink: 0;
+    margin-top: 3px;
+  }
+
+  /* Bootstrap `small` inside an fs-5 / fs-md-4 heading context. */
+  .bs-table {
+    width: 100%;
+    border-collapse: collapse;
+    color: #212529;
+  }
+
+  .bs-table th,
+  .bs-table td {
+    border: 1px solid #dee2e6;
+    padding: 0.25rem;
+    vertical-align: middle;
+  }
+
+  .bs-table thead th {
+    background-color: #f8f9fa;
+    font-weight: 700;
+  }
+
+  .bs-table tbody tr:hover {
+    background-color: rgba(0, 0, 0, 0.075);
+  }
+
+  .bs-table tfoot {
+    background-color: #f8f9fa;
+    font-weight: 700;
+  }
+}
