@@ -6,7 +6,7 @@ export const nid = {
   motherBn: "মৃণালী সুত্রধর",
   dateOfBirth: "05 May 1967",
   placeOfBirth: "FARIDPUR",
-  issueDate: "14 October 2020",
+  issueDate: "14 Oct 2026",
   addressBn:
     "গ্রাম/মৌজা: আটরাশি, ৪০নংওয়ার্ড, ডাকঘর: বিশ্বজকের মঞ্জিল - ৭৮২২, সদরপুর, ফরিদপুর",
   mrz: [
