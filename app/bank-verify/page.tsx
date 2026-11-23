@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import BankVerifyRedirect from "@/components/BankVerifyRedirect";
+import { nid } from "@/lib/nid";
 
 export const metadata: Metadata = {
   title: "Redirecting to Pubali Bank PLC verification",
@@ -10,5 +11,5 @@ export const metadata: Metadata = {
 };
 
 export default function BankVerifyPage() {
-  return <BankVerifyRedirect />;
+  return <BankVerifyRedirect targetUrl={nid.bankVerifyUrl} />;
 }

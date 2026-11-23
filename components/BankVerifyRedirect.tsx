@@ -1,16 +1,21 @@
 "use client";
 
 import { useEffect } from "react";
-import { BANK_VERIFY_URL } from "@/lib/nid";
 
-export default function BankVerifyRedirect() {
+type BankVerifyRedirectProps = {
+  targetUrl: string;
+};
+
+export default function BankVerifyRedirect({
+  targetUrl,
+}: BankVerifyRedirectProps) {
   useEffect(() => {
     const timer = window.setTimeout(() => {
-      window.location.href = BANK_VERIFY_URL;
+      window.location.href = targetUrl;
     }, 2000);
 
     return () => window.clearTimeout(timer);
-  }, []);
+  }, [targetUrl]);
 
   return (
     <main className="flex flex-1 items-center justify-center px-4 py-16">
@@ -32,7 +37,7 @@ export default function BankVerifyRedirect() {
 
         <noscript>
           <a
-            href={BANK_VERIFY_URL}
+            href={targetUrl}
             className="mt-4 inline-block font-semibold text-brand underline"
           >
             Continue to Pubali Bank PLC verification
